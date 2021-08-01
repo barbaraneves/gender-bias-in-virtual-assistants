@@ -1,6 +1,6 @@
 # *Identifying Gender Bias in Virtual Assistants*
 
-![alt text](Resources/Images/gender_bias.png)
+![alt text](resources/images/gender_bias.png)
 
 Projeto Final da disciplina de Ciência de Dados - UFC 2021.1, em sua maioria feito no [Google Colab](https://research.google.com/colaboratory/faq.html). Colocamos em um repositório para facilitar o acesso e a correção.
 
@@ -48,16 +48,16 @@ jupyter notebook
 
 ## Visão Geral e Checkpoints
 
-![ml canvas](/Resources/Images/ml_canvas.png)
+![ml canvas](/resources/images/ml_canvas.png)
 
 Fornecemos abaixo os passos a serem seguidos para entendimento do projeto em forma de *checkpoints*.
 
-* [Checkpoint 1 - Project Canvas](/Resources/Docs/CHECKPOINT_1_CANVAS.md)
-* [Checkpoint 2 - EDA (Checkpoint #2)](/Resources/Docs/)
-* [Checkpoint 3 - Data Preprocessing](/Resources/Docs/)
-* [Checkpoint 4 - Models Training](/Resources/Docs/)
-* [Checkpoint 5 - Models Evaluation](/Resources/Docs/)
-* [Final Checkpoint - Slide Presentation](/Resources/Docs/)
+* [Checkpoint 1 - Project Canvas](/resources/docs/CHECKPOINT_1_CANVAS.md)
+* [Checkpoint 2 - EDA (Checkpoint #2)](/resources/docs/)
+* [Checkpoint 3 - Data Preprocessing](/resources/docs/)
+* [Checkpoint 4 - Models Training](/resources/docs/)
+* [Checkpoint 5 - Models Evaluation](/resources/docs/)
+* [Final Checkpoint - Slide Presentation](/resources/docs/)
 
 Na verdade, ao longo do desenvolvimento do trabalho, tivemos de entregar 5 *checkpoints*. Dos listados acima, os *checkpoints* oficiais são os 1 e 2, e os restantes dizem respeito mais a nossa organização interna. 
 

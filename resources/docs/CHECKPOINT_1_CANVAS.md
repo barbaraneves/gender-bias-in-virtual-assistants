@@ -1,10 +1,10 @@
 # Checkpoint 1 - Project Canvas
 
-Este se trata do Checkpoint #1, no qual geramos um *Project ML Canvas* para fornecer uma visão geral do nosso projeto.
+Este se trata do Checkpoint #1, no qual geramos um *canvas* para fornecer uma visão geral do nosso projeto.
 
 ## Machine Learning Canvas
 
-![ml canvas](/Resources/Images/ml_canvas.png)
+![ml canvas](/resources/images/ml_canvas.png)
 
 O *Machine Learning* (ML) *Canvas* é usado para descrever como um sistema de ML transformará as predições em valor para os usuários finais, com quais dados ele aprenderá e como garantir que funcionará conforme o esperado.
 
@@ -13,4 +13,4 @@ Nosso ML *Canvas* está disponível completo neste [link](https://docs.google.co
 
 ## Next
 
-Agora, vamos ver como foi feita a [análise exploratória](/Resources/Docs/) dos dados utilizados neste projeto.
+Agora, vamos ver como foi feita a [análise exploratória dos dados](/resources/docs/) utilizados neste projeto.
