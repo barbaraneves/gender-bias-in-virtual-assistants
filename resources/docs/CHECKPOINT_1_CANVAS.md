@@ -13,4 +13,4 @@ Nosso ML *Canvas* está disponível completo neste [link](https://docs.google.co
 
 ## Next
 
-Agora, vamos ver como foi feita a [análise exploratória dos dados](/resources/docs/) utilizados neste projeto.
+Agora, vamos ver como foi feita a [análise exploratória](/resources/docs/) dos dados utilizados neste projeto.
