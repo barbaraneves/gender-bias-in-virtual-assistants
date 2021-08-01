@@ -6,6 +6,10 @@ Projeto Final da disciplina de Ciência de Dados - UFC 2021.1, em sua maioria fe
 
 ---
 
+## Objetivos
+1. Desenvolver um projeto inédito de Ciência de Dados o mais próximo possível de um projeto real, a fim de demonstrar os conhecimentos adquiridos ao longo da disciplina.
+2. Comparar os algoritmos escolhidos com conjuntos de dados reais utilizando métricas de avaliação vistas ou não na disciplina.
+
 ## Abstract
 
 *A definir*
@@ -13,6 +17,8 @@ Projeto Final da disciplina de Ciência de Dados - UFC 2021.1, em sua maioria fe
 ## Resultados 
 
 *A definir*
+
+---
 
 ## Quick Start
 
