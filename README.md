@@ -50,16 +50,16 @@ jupyter notebook
 
 ![ml canvas](/Resources/Images/ml_canvas.png)
 
-Fornecemos abaixo os passos a serem seguidos para entendimento do projeto. 
+Fornecemos abaixo os passos a serem seguidos para entendimento do projeto em forma de *checkpoints*.
 
-* [1 - Project Canvas (Checkpoint #1)](/Resources/Docs/CHECKPOINT_1_CANVAS.md)
-* [2 - EDA (Checkpoint #2)](/Resources/Docs/)
-* [3 - Data Preprocessing](/Resources/Docs/)
-* [4 - Models Training](/Resources/Docs/)
-* [5 - Models Evaluation](/Resources/Docs/)
-* [6 - Slide Presentation](/Resources/Docs/)
+* [Checkpoint 1 - Project Canvas](/Resources/Docs/CHECKPOINT_1_CANVAS.md)
+* [Checkpoint 2 - EDA (Checkpoint #2)](/Resources/Docs/)
+* [Checkpoint 3 - Data Preprocessing](/Resources/Docs/)
+* [Checkpoint 4 - Models Training](/Resources/Docs/)
+* [Checkpoint 5 - Models Evaluation](/Resources/Docs/)
+* [Final Checkpoint - Slide Presentation](/Resources/Docs/)
 
-Ao longo do desenvolvimento do trabalho, tivemos de entregar alguns *checkpoints*, dos quais apenas dois estão listados acima. Como os *checkpoints* 3, 4 e 5 dizem respeito mais à entrega final e às apresentações do trabalho, resolvemos apenas listar como passos.
+Na verdade, ao longo do desenvolvimento do trabalho, tivemos de entregar 5 *checkpoints*. Dos listados acima, os *checkpoints* oficiais são os 1 e 2, e os restantes dizem respeito mais a nossa organização interna. 
 
 ## Contato
 
