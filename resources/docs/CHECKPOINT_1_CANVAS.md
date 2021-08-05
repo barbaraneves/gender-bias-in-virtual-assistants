@@ -13,4 +13,4 @@ Nosso ML *Canvas* está disponível completo neste [link](https://docs.google.co
 
 ## Next
 
-Agora, vamos ver como foi feita a [análise exploratória](/resources/docs/) dos dados utilizados neste projeto.
+Agora, vamos ver como foi feita a [análise exploratória](https://github.com/barbaraneves/gender-bias-in-virtual-assistants/tree/main/exploratory-data-analysis) dos dados utilizados neste projeto.
