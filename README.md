@@ -53,7 +53,7 @@ jupyter notebook
 Fornecemos abaixo os passos a serem seguidos para entendimento do projeto em forma de *checkpoints*.
 
 * [Checkpoint 1 - Project Canvas](/resources/docs/CHECKPOINT_1_CANVAS.md)
-* [Checkpoint 2 - Exploratory Data Analysis (EDA)](/resources/docs/)
+* [Checkpoint 2 - Exploratory Data Analysis (EDA)](https://github.com/barbaraneves/gender-bias-in-virtual-assistants/tree/main/exploratory-data-analysis)
 * [Checkpoint 3 - Data Preprocessing](/resources/docs/)
 * [Checkpoint 4 - Models Training](/resources/docs/)
 * [Checkpoint 5 - Models Evaluation](/resources/docs/)
