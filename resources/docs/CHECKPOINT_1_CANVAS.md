@@ -1,6 +1,6 @@
 # Checkpoint 1 - Project Canvas
 
-Este se trata do Checkpoint #1, no qual geramos um *canvas* para fornecer uma visão geral do nosso projeto.
+Este é o Checkpoint #1, no qual geramos um *canvas* para fornecer uma visão geral do nosso projeto.
 
 ## Machine Learning Canvas
 
