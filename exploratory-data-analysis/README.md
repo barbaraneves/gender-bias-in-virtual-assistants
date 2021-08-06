@@ -4,7 +4,11 @@ Este é o Checkpoint #2, no qual fornecemos uma análise exploratória dos conju
 
 ## Overview
 
-O objetivo principal do nosso trabalho consta na investigação da relação entre viés/preconceito de gênero com linguagem ofensiva/tóxica em textos de diálogos entre uma assistente virtual e um usuário. Muitos textos com viés de gênero - sejam explicitamente ou contextualmente relacionados ao gênero - são depreciativos ou têm conotações negativas. Inicialmente, podemos investigar essa relação examinando as classes preditas pelo classificador de gênero com os rótulos preditos pelo classificador de toxicidade. Para isso, faremos uso de 4 conjuntos de dados, os quais passaram pelo processo de EDA:
+O objetivo principal do nosso trabalho consta na investigação da relação entre viés/preconceito de gênero com linguagem ofensiva/tóxica em textos de diálogos entre uma assistente virtual e um usuário. Muitos textos com viés de gênero, sejam explicitamente ou contextualmente relacionados ao gênero, são depreciativos ou têm conotações negativas. Inicialmente, podemos investigar essa relação examinando as classes preditas pelo classificador de gênero com os rótulos preditos pelo classificador de toxicidade. 
+
+## EDA Process 
+
+Neste *checkpoint*, faremos uso de 4 conjuntos de dados:
 
 | Language | Dataset | Available | EDA Notebook
 |  ---  | ----------- | ------------- | ------------- |
