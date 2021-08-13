@@ -108,12 +108,12 @@ def plot_most_frequent_elements(count_elems, n_most_common, title, xlabel="Count
                fontsize=12)
     plt.tight_layout() # Change the whitespace such that all labels fit nicely
     
-def bar_values(ax, labels):
+def bar_values(ax, labels, rotation=60):
     rects = ax.patches
     
     for rect, label in zip(rects, labels):
         height = rect.get_height()
-        ax.text(rect.get_x() + rect.get_width()/2, height + 0.01, label, ha='center', va='bottom', fontsize=14, rotation=60)
+        ax.text(rect.get_x() + rect.get_width()/2, height + 0.01, label, ha='center', va='bottom', fontsize=14, rotation=rotation)
     
     return ax
 
@@ -193,3 +193,43 @@ def subplot_topic_wordcloud(wc_data, nrows, ncols, width, height, title, range_s
         ax[i_ax][1].axis('off')
         ax[i_ax][1].set_title('{}'.format(wc_data[i + 1][1]), fontdict={'fontsize': 18})
         fig.tight_layout()
+        
+def plot_histogram_labels_count_each(x_label, y_label, labels, hue_label=None, data=None, palette='RdGy_r', title=None, width=None, height=None):
+    sns.set(style='whitegrid', font_scale=1.3)
+    fig, axes = plt.subplots(2, 3, figsize=(width, height))
+
+    fig.suptitle(title)
+
+    sns.barplot(ax=axes[0][0], x=x_label, y=y_label[0], palette=palette)
+    axes[0][0].tick_params(axis='x', rotation=60)
+    axes[0][0].set_title('Comentários anotados com 1 rótulo')
+    bar_values(axes[0][0], labels[0], rotation=0)
+
+    sns.barplot(ax=axes[0][1], x=x_label, y=y_label[1], palette=palette)
+    axes[0][1].tick_params(axis='x', rotation=60)
+    axes[0][1].set_title('Comentários anotados com 2 rótulos')
+    bar_values(axes[0][1], labels[1], rotation=0)
+
+    sns.barplot(ax=axes[0][2], x=x_label, y=y_label[2], palette=palette)
+    axes[0][2].tick_params(axis='x', rotation=60)
+    axes[0][2].set_title('Comentários anotados com 3 rótulos')
+    bar_values(axes[0][2], labels[2], rotation=0)
+
+    sns.barplot(ax=axes[1][0], x=x_label, y=y_label[3], palette=palette)
+    axes[1][0].tick_params(axis='x', rotation=60)
+    axes[1][0].set_title('Comentários anotados com 4 rótulos')
+    bar_values(axes[1][0], labels[3], rotation=0)
+
+    sns.barplot(ax=axes[1][1], x=x_label, y=y_label[4], palette=palette)
+    axes[1][1].tick_params(axis='x', rotation=60)
+    axes[1][1].set_title('Comentários anotados com 5 rótulos')
+    bar_values(axes[1][1], labels[4], rotation=0)
+
+    sns.barplot(ax=axes[1][2], x=x_label, y=y_label[5], palette=palette)
+    axes[1][2].tick_params(axis='x', rotation=60)
+    axes[1][2].set_title('Comentários anotados com todos os rótulos')
+    bar_values(axes[1][2], labels[5], rotation=0)
+
+    fig.tight_layout(rect=[0, 0.03, 1, 0.95])
+
+    plt.show()
