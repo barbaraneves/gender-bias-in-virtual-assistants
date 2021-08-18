@@ -59,7 +59,7 @@ Fornecemos abaixo os passos a serem seguidos para entendimento do projeto em for
 * [Checkpoint 5 - Models Evaluation](/resources/docs/)
 * [Final Checkpoint - Slide Presentation](/resources/docs/)
 
-Na verdade, ao longo do desenvolvimento do trabalho, tivemos de entregar 5 *checkpoints*. Dos listados acima, os *checkpoints* oficiais são os 1 e 2, e os restantes dizem respeito mais a nossa organização interna. Nos avise se algo não estiver claro.
+Na verdade, ao longo do desenvolvimento do trabalho, tivemos de entregar 3 *checkpoints*. Dos listados acima, os *checkpoints* oficiais são os 1 e 2, e os restantes dizem respeito mais a nossa organização interna. Nos avise se algo não estiver claro.
 
 ## Contato
 
