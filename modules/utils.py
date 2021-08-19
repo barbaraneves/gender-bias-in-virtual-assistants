@@ -1,9 +1,13 @@
 import pandas as pd
 import numpy as np
+import re
 
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker 
 import seaborn as sns
+
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import multilabel_confusion_matrix
 
 from collections import Counter
 from spacy.lang.en.stop_words import STOP_WORDS
@@ -117,7 +121,47 @@ def bar_values(ax, labels, rotation=60):
     
     return ax
 
-def plot_histogram_labels(x_label, y_label, labels, hue_label=None, data=None, palette='RdGy_r', title=None, ylabel_title=None, width=None, height=None):
+def plot_histogram_labels_count_each(x_label, y_label, labels, hue_label=None, data=None, palette='RdGy_r', title=None, width=None, height=None):
+    sns.set(style='whitegrid', font_scale=1.3)
+    fig, axes = plt.subplots(2, 3, figsize=(width, height))
+
+    fig.suptitle(title)
+
+    sns.barplot(ax=axes[0][0], x=x_label, y=y_label[0], palette=palette)
+    axes[0][0].tick_params(axis='x', rotation=60)
+    axes[0][0].set_title('Comentários anotados com 1 rótulo')
+    bar_values(axes[0][0], labels[0], rotation = 0)
+
+    sns.barplot(ax=axes[0][1], x=x_label, y=y_label[1], palette=palette)
+    axes[0][1].tick_params(axis='x', rotation=60)
+    axes[0][1].set_title('Comentários anotados com 2 rótulos')
+    bar_values(axes[0][1], labels[1], rotation = 0)
+
+    sns.barplot(ax=axes[0][2], x=x_label, y=y_label[2], palette=palette)
+    axes[0][2].tick_params(axis='x', rotation=60)
+    axes[0][2].set_title('Comentários anotados com 3 rótulos')
+    bar_values(axes[0][2], labels[2], rotation = 0)
+
+    sns.barplot(ax=axes[1][0], x=x_label, y=y_label[3], palette=palette)
+    axes[1][0].tick_params(axis='x', rotation=60)
+    axes[1][0].set_title('Comentários anotados com 4 rótulos')
+    bar_values(axes[1][0], labels[3], rotation = 0)
+
+    sns.barplot(ax=axes[1][1], x=x_label, y=y_label[4], palette=palette)
+    axes[1][1].tick_params(axis='x', rotation=60)
+    axes[1][1].set_title('Comentários anotados com 5 rótulos')
+    bar_values(axes[1][1], labels[4], rotation = 0)
+
+    sns.barplot(ax=axes[1][2], x=x_label, y=y_label[5], palette=palette)
+    axes[1][2].tick_params(axis='x', rotation=60)
+    axes[1][2].set_title('Comentários anotados com todos os rótulos')
+    bar_values(axes[1][2], labels[5], rotation = 0)
+
+    fig.tight_layout(rect=[0, 0.03, 1, 0.95])
+
+    plt.show()
+
+def plot_histogram_labels(x_label, y_label, labels, hue_label=None, data=None, palette='RdGy_r', title=None, ylabel_title=None, width=None, height=None, rotation=60):
     sns.set(style='whitegrid', font_scale=1.3)
     plt.figure(figsize=(width, height))
     
@@ -127,7 +171,7 @@ def plot_histogram_labels(x_label, y_label, labels, hue_label=None, data=None, p
     plt.xlabel('')
     plt.ylabel(ylabel_title, fontsize=14)
     
-    bar_values(ax, labels)
+    bar_values(ax, labels, rotation=rotation)
     plt.show()
     
 def plot_corr_matrix(data, cols, title):
@@ -193,43 +237,59 @@ def subplot_topic_wordcloud(wc_data, nrows, ncols, width, height, title, range_s
         ax[i_ax][1].axis('off')
         ax[i_ax][1].set_title('{}'.format(wc_data[i + 1][1]), fontdict={'fontsize': 18})
         fig.tight_layout()
+    
+def get_keys_by_values(dict_of_elements, list_of_values):
+    list_of_keys = []
+    inv_dict = {str(value): key for key, value in dict_of_elements.items()}
+    for item in list_of_values:
+        list_of_keys.append(inv_dict[str(item)])
+    return list_of_keys
+    
+def plot_multilabel_confusion_matrix(y_true, y_pred, labels):
+    cm = confusion_matrix(y_true, y_pred)
+    df_cm = pd.DataFrame(cm, index=labels, columns=labels)
+    
+    # plt.figure(figsize=(18, 12))
+    sns.heatmap(df_cm, annot=True, fmt="d", annot_kws={"size": 14},  linewidths=0.5, vmax=400, cmap='RdBu_r');
+    
+def plot_grid_multilabel_confusion_matrixes(y_true_list, y_pred_list, nrows, ncols, figsize, title, subtitles, labels):
+    fig, axs = plt.subplots(nrows, ncols, figsize=figsize)
+    fig.suptitle(title, fontsize=20, y=1.05)
+    
+    if ncols == nrows == 1:
+        axs = [axs]
+    else:
+        axs = axs.flat
+
+
+    for ax, subtitle, y_true, y_pred in zip(axs, subtitles, y_true_list, y_pred_list):
+        cm = confusion_matrix(y_true, y_pred)
+        print(cm)
+        counter_rows_cm = [row.sum() for row in cm]
+        counter_cols_cm = [sum(col) for col in zip(*cm)]
         
-def plot_histogram_labels_count_each(x_label, y_label, labels, hue_label=None, data=None, palette='RdGy_r', title=None, width=None, height=None):
-    sns.set(style='whitegrid', font_scale=1.3)
-    fig, axes = plt.subplots(2, 3, figsize=(width, height))
+        print(counter_rows_cm, counter_cols_cm)
+        
+        counter_y_true = Counter(y_true)
+        inv_counter_y_true = {value: key for key, value in counter_y_true.items()}
+        
+        counter_y_pred = Counter(y_pred)
+        inv_counter_y_pred = {value: key for key, value in counter_y_pred.items()}
+        
+        print(counter_y_true)
+        print(counter_y_pred)
+        
+        true_labels = [inv_counter_y_true[v] for v in counter_rows_cm]
+        pred_labels = [inv_counter_y_pred[v] for v in counter_cols_cm]
+        
+        print(true_labels, pred_labels)
 
-    fig.suptitle(title)
-
-    sns.barplot(ax=axes[0][0], x=x_label, y=y_label[0], palette=palette)
-    axes[0][0].tick_params(axis='x', rotation=60)
-    axes[0][0].set_title('Comentários anotados com 1 rótulo')
-    bar_values(axes[0][0], labels[0], rotation=0)
-
-    sns.barplot(ax=axes[0][1], x=x_label, y=y_label[1], palette=palette)
-    axes[0][1].tick_params(axis='x', rotation=60)
-    axes[0][1].set_title('Comentários anotados com 2 rótulos')
-    bar_values(axes[0][1], labels[1], rotation=0)
-
-    sns.barplot(ax=axes[0][2], x=x_label, y=y_label[2], palette=palette)
-    axes[0][2].tick_params(axis='x', rotation=60)
-    axes[0][2].set_title('Comentários anotados com 3 rótulos')
-    bar_values(axes[0][2], labels[2], rotation=0)
-
-    sns.barplot(ax=axes[1][0], x=x_label, y=y_label[3], palette=palette)
-    axes[1][0].tick_params(axis='x', rotation=60)
-    axes[1][0].set_title('Comentários anotados com 4 rótulos')
-    bar_values(axes[1][0], labels[3], rotation=0)
-
-    sns.barplot(ax=axes[1][1], x=x_label, y=y_label[4], palette=palette)
-    axes[1][1].tick_params(axis='x', rotation=60)
-    axes[1][1].set_title('Comentários anotados com 5 rótulos')
-    bar_values(axes[1][1], labels[4], rotation=0)
-
-    sns.barplot(ax=axes[1][2], x=x_label, y=y_label[5], palette=palette)
-    axes[1][2].tick_params(axis='x', rotation=60)
-    axes[1][2].set_title('Comentários anotados com todos os rótulos')
-    bar_values(axes[1][2], labels[5], rotation=0)
-
-    fig.tight_layout(rect=[0, 0.03, 1, 0.95])
-
-    plt.show()
+        df_cm = pd.DataFrame(cm, index=true_labels, columns=pred_labels)
+        
+        sns.heatmap(df_cm[labels], annot=True, fmt="d", annot_kws={"size": 14},  linewidths=0.5, vmax=400, cmap='RdBu_r', ax=ax)
+        ax.set_title(subtitle)
+        ax.set_xlabel('Valores Preditos', fontsize=16)
+        ax.set_ylabel('Valores Reais', fontsize=16)
+        plt.setp(ax.get_xticklabels(), rotation=45);
+    fig.tight_layout()
+    fig.show()
