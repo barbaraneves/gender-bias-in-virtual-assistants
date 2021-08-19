@@ -94,3 +94,8 @@ widgetsnbextension==3.5.1
 wordcloud==1.8.1
 zipp==3.4.1
 datasets==1.11.0
+transformers==4.9.2
+scikit-multilearn==0.2.0
+tensorflow-addons==0.14.0
+keras-tqdm==2.0.1
+tensorflow==2.6.0
