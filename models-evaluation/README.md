@@ -1,6 +1,6 @@
-# Checkpoint 2 - Exploratory Data Analysis (EDA)
+# Checkpoint 5 - Models Evaluation
 
-Este é o Checkpoint #2, no qual fornecemos uma análise exploratória dos conjuntos de dados utilizados neste trabalho. 
+<!-- Este é o Checkpoint #2, no qual fornecemos uma análise exploratória dos conjuntos de dados utilizados neste trabalho. 
 
 ## Overview
 
@@ -17,6 +17,6 @@ Neste *checkpoint*, faremos uso de 4 conjuntos de dados:
 | English | ConvAI2   | [HuggingFace](https://huggingface.co/datasets/viewer/?dataset=md_gender_bias&config=convai2_inferred) | [ConvIA2 Dataset Analysis](https://github.com/barbaraneves/gender-bias-in-virtual-assistants/blob/main/exploratory-data-analysis/3%20-%20ConvAI2%20Dataset%20Analysis.ipynb)  |
 | English  | LIGHT  | [HuggingFace](https://huggingface.co/datasets/viewer/?dataset=md_gender_bias&config=light_inferred) | [LIGHT Dataset Analysis](https://github.com/barbaraneves/gender-bias-in-virtual-assistants/blob/main/exploratory-data-analysis/4%20-%20LIGHT%20Dataset%20Analysis.ipynb)  |
 
-## Next
+## Next -->
 
 *A definir*
