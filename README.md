@@ -16,7 +16,12 @@ Projeto Final da disciplina de Ciência de Dados - UFC 2021.1, em sua maioria fe
 
 ## Resultados 
 
-*A definir*
+| **Task** | **Dataset** | **Sample** | **Stratified Split** | **F1 LSTM** | **F1 BERT** | 
+|  -------------- |  -----------  |  -----------  |  -----------  |----------- | ------------- | 
+|  Tocixity, Multi-label  | Wikipedia Toxic Comments | Undersampling (~20k) | Yes | 0.67 | **0.68** | 
+|  Gender Bias, Multiclass | MDGender | ~2k | Yes | 0.75 | **0.88** |
+|  Gender Bias, Multiclass | ConvAI2  | 50k | Yes | 0.69 | **0.81**  |
+|  Gender Bias, Multiclass  | LIGHT | 50k | Yes | 0.73 | **0.83**  |
 
 ---
 
@@ -54,9 +59,9 @@ Fornecemos abaixo os passos a serem seguidos para entendimento do projeto em for
 
 * [Checkpoint 1 - Project Canvas](/resources/docs/CHECKPOINT_1_CANVAS.md)
 * [Checkpoint 2 - Exploratory Data Analysis (EDA)](https://github.com/barbaraneves/gender-bias-in-virtual-assistants/tree/main/exploratory-data-analysis)
-* [Checkpoint 3 - Data Preprocessing](/resources/docs/)
-* [Checkpoint 4 - Models Training](/resources/docs/)
-* [Checkpoint 5 - Models Evaluation](/resources/docs/)
+* [Checkpoint 3 - Data Preprocessing](https://github.com/barbaraneves/gender-bias-in-virtual-assistants/tree/main/data-preprocessing)
+* [Checkpoint 4 - Models Training](https://github.com/barbaraneves/gender-bias-in-virtual-assistants/tree/main/models-training)
+* [Checkpoint 5 - Models Evaluation](https://github.com/barbaraneves/gender-bias-in-virtual-assistants/tree/main/models-evaluation)
 * [Final Checkpoint - Slide Presentation](/resources/docs/)
 
 Na verdade, ao longo do desenvolvimento do trabalho, tivemos de entregar 3 *checkpoints*. Dos listados acima, os *checkpoints* oficiais são os 1 e 2, e os restantes dizem respeito mais a nossa organização interna. Nos avise se algo não estiver claro.
