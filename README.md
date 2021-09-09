@@ -1,5 +1,7 @@
 # *Identifying Gender Bias in Virtual Assistants*
 
+**To be published!**
+
 ![alt text](resources/images/gender_bias.png)
 
 Projeto Final da disciplina de Ciência de Dados - UFC 2021.1, em sua maioria feito no [Google Colab](https://research.google.com/colaboratory/faq.html). Colocamos em um repositório para facilitar o acesso e a correção.
