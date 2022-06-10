@@ -19,7 +19,7 @@ Projeto Final da disciplina de Ciência de Dados - UFC 2021.1, em sua maioria fe
 ## Resultados 
 
 | **Task** | **Dataset** | **Sample** | **Stratified Split** | **F1 LSTM** | **F1 BERT** | 
-|  -------------- |  -----------  |  -----------  |  -----------  |----------- | ------------- | 
+|  -------------- |  :-----------:  |  :-----------:  |  :-----------:  | :-----------: | :-------------: | 
 |  Tocixity, Multi-label  | Wikipedia Toxic Comments | Undersampling (~20k) | Yes | 0.67 | **0.68** | 
 |  Gender Bias, Multiclass | MDGender | ~2k | Yes | 0.75 | **0.88** |
 |  Gender Bias, Multiclass | ConvAI2  | 50k | Yes | 0.69 | **0.81**  |
